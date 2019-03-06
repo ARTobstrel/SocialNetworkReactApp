@@ -1,0 +1,21 @@
+.nav {
+    padding: 15px;
+    grid-area: n;
+    background: #b4ffb4;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    font-size: 22px;
+}
+
+.nav a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+}
+
+.nav a.active {
+    color: #191ebc;
+}
+
