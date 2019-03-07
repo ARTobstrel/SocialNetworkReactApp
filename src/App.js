@@ -13,7 +13,7 @@ const App = (props) => {
                 <div className={'App-wrapper'}>
 
                     <Header/>
-                    <Navbar/>
+                    <Navbar myfriends={props.state.profilePage}/>
                     <Content profilePage={props.state.profilePage}
                              messagePage={props.state.messagePage}/>
 
