@@ -14,9 +14,24 @@ const MyPosts = (props) => {
             <Post message={c.comment} src_img={c.src_img} />
         );
 
+    let newPostElement = React.createRef();
+
+    let addPost = () => {
+        let text = newPostElement.current.value;
+        alert(text);
+    };
+
     return (
         <div>
             <h3>My Posts:</h3>
+
+            <div>
+                <textarea ref={newPostElement}></textarea>
+            </div>
+
+            <div>
+                <button onClick={addPost}>Add post</button>
+            </div>
 
             <div className={s.posts}>
                 {myPosts}

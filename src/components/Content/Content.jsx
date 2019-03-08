@@ -5,12 +5,14 @@ import News from "./News/News";
 import Music from "./Music/Music";
 import Settings from "./Settings/Settings";
 import React from "react";
-
+import About from "./About/About";
 
 
 const Content = (props) => {
     return(
         <div className={'App-wrapper-content'}>
+
+
 
             <Route path={'/dialogs'} render={ () => <Dialogs dialogsData={props.messagePage.dialogsData}
                                                              messages={props.messagePage.messages}/>}/>
@@ -19,6 +21,8 @@ const Content = (props) => {
             <Route path={'/news'} render={ () => <News/>}/>
             <Route path={'/music'} render={ () => <Music/>}/>
             <Route path={'/settings'} render={ () => <Settings/>}/>
+
+            <Route path={'/about'} render={ () => <About/>}/>
 
         </div>
     )
