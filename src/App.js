@@ -9,16 +9,18 @@ import Content from "./components/Content/Content";
 const App = (props) => {
 
     return (
-            <BrowserRouter>
-                <div className={'App-wrapper'}>
+        <BrowserRouter>
+            <div className={'App-wrapper'}>
 
-                    <Header/>
-                    <Navbar myfriends={props.state.profilePage}/>
-                    <Content profilePage={props.state.profilePage}
-                             messagePage={props.state.messagePage}/>
+                <Header/>
+                <Navbar myfriends={props.state.profilePage}/>
+                <Content profilePage={props.state.profilePage}
+                         messagePage={props.state.messagePage}
+                         dispatch={props.dispatch}/>
 
-                </div>
-            </BrowserRouter>);
+            </div>
+
+        </BrowserRouter>);
 };
 
 export default App;

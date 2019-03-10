@@ -17,7 +17,9 @@ const Content = (props) => {
             <Route path={'/dialogs'} render={ () => <Dialogs dialogsData={props.messagePage.dialogsData}
                                                              messages={props.messagePage.messages}/>}/>
             <Route path={'/profile'} render={ () => <Profile posts={props.profilePage.posts}
-                                                             comments={props.profilePage.comments}/>}/>
+                                                             comments={props.profilePage.comments}
+                                                             newPostText={props.profilePage.newPostText}
+                                                             dispatch={props.dispatch}/>}/>
             <Route path={'/news'} render={ () => <News/>}/>
             <Route path={'/music'} render={ () => <Music/>}/>
             <Route path={'/settings'} render={ () => <Settings/>}/>
