@@ -1,6 +1,10 @@
+import profileReducer from "./profile-reducer";
+import dialogsReducer from "./dialogs-reducer";
+
 const ADD_POST = 'ADD-POST';
 const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
-
+const ADD_MESSAGE = 'ADD-MESSAGE';
+const UPDATE_NEW_MESSAGE_BODY = 'UPDATE-NEW-MESSAGE-BODY';
 
 let store = {
     _state: {
@@ -58,7 +62,8 @@ let store = {
                 {id: 2, message: 'Hello, everybody'},
                 {id: 3, message: 'Yo, guys'},
                 {id: 4, message: 'Boys and girls, i love you'},
-            ]
+            ],
+            newMessageText: 'Hello!'
         }
 
     },
@@ -76,21 +81,13 @@ let store = {
     },
 
     dispatch(action) {
-        if (action.type === ADD_POST) {
-            let newPost = {
-                id: 5,
-                post: this._state.profilePage.newPostText
-            };
 
-            this._state.profilePage.posts.push(newPost);
-            this._state.profilePage.newPostText = '';
-            this._callSubscriber(this._state);
-        } else if (action.type === 'UPDATE-NEW-POST-TEXT') {
-            this._state.profilePage.newPostText = action.newText;
-            this._callSubscriber(this._state);
-        }
+        this._state.profilePage = profileReducer(this._state.profilePage, action);
+        this._state.messagePage = dialogsReducer(this._state.messagePage, action);
+
+        this._callSubscriber(this._state);
+
     }
-
 };
 
 export let addPostActionCreator = () => {
@@ -99,9 +96,22 @@ export let addPostActionCreator = () => {
     }
 };
 
-export let updateNewPostTextActionCreator = (text) => {
+export let addMessageActionCreator = () => {
     return {
-        type: UPDATE_NEW_POST_TEXT, newText: text}
+        type: ADD_MESSAGE
+    }
+};
+
+export let updateNewPostTextCreator = (text) => {
+    return {
+        type: UPDATE_NEW_POST_TEXT, newText: text
+    }
+};
+
+export let updateNewMessageTextCreator = (text) => {
+    return {
+        type: UPDATE_NEW_MESSAGE_BODY, newText: text
+    }
 };
 
 export default store;

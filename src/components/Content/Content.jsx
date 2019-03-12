@@ -15,7 +15,9 @@ const Content = (props) => {
 
 
             <Route path={'/dialogs'} render={ () => <Dialogs dialogsData={props.messagePage.dialogsData}
-                                                             messages={props.messagePage.messages}/>}/>
+                                                             messages={props.messagePage.messages}
+                                                             newMessageText={props.messagePage.newMessageText}
+                                                             dispatch={props.dispatch}/>}/>
             <Route path={'/profile'} render={ () => <Profile posts={props.profilePage.posts}
                                                              comments={props.profilePage.comments}
                                                              newPostText={props.profilePage.newPostText}

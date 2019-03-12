@@ -2,7 +2,14 @@
     height: 60%;
 }
 
+.wrapper_face {
+    display: flex;
+    border: 1px solid black;
+    background-color: #fff;
+    width: 12%;
+}
+
 .face {
-    padding: 3px;
-    width: 11%;
+    padding: 4px;
+    width: 100%;
 }
