@@ -34,6 +34,12 @@ let initialState = {
             comment: 'fuck you all',
             src_img: 'https://im0-tub-ru.yandex.net/i?id=0ecf55701e43c5edfeaee879ebd5001d-l&n=13'
         },
+        {
+            id: 5,
+            name: 'Veronika',
+            comment: 'I love you!!!',
+            src_img: 'https://im0-tub-ru.yandex.net/i?id=e1ff61ef5d2a1fefe4c9be12f715a9a1-l&n=13',
+        }
     ],
     newPostText: ''
 };
@@ -43,7 +49,7 @@ const profileReducer = (state=initialState, action) => {
     switch (action.type) {
         case ADD_POST:
             let newPost = {
-                id: 5,
+                id: 50,
                 post: state.newPostText
             };
 

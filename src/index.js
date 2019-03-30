@@ -8,7 +8,7 @@ import App from './App';
 
 let rerenderEntireTree = () => {
     ReactDOM.render(<App state={store.getState()}
-                         dispatch={store.dispatch.bind(store)} />, document.getElementById('root'));
+                         dispatch={store.dispatch.bind(store)} store={store} />, document.getElementById('root'));
 };
 
 rerenderEntireTree(store.getState()); //первичная прорисовка Dom

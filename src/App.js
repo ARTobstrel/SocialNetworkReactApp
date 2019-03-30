@@ -14,9 +14,7 @@ const App = (props) => {
 
                 <Header/>
                 <Navbar myfriends={props.state.profilePage}/>
-                <Content profilePage={props.state.profilePage}
-                         messagePage={props.state.messagePage}
-                         dispatch={props.dispatch}/>
+                <Content store={props.store} />
 
             </div>
 
