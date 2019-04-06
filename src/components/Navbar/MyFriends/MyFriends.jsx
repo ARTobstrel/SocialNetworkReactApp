@@ -2,7 +2,6 @@ import s from './MyFriends.module.css';
 import React from "react";
 
 const MyFriends = (props) => {
-
     let friends = props.myfriends
         .map((f) =>
             <div className={s.item}>

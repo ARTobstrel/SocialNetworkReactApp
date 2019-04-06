@@ -1,5 +1,6 @@
 .side {
-    height: 60%;
+    height: 100%;
+    width: max-content;
 }
 
 .wrapper_face {
