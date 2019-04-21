@@ -3,8 +3,8 @@ import React from "react";
 
 const MyFriends = (props) => {
     let friends = props.myfriends
-        .map((f) =>
-            <div className={s.item}>
+        .map(f =>
+            <div className={s.item} key={f.id}>
                 <img src={f.src_img} alt=""/>
                 {f.name}
             </div>

@@ -8,12 +8,12 @@ const Dialogs = (props) => {
 
     let dialogsElements = props.dialogsData
         .map( d =>
-            <DialogItem name={d.name} id={d.id}/>
+            <DialogItem name={d.name} key={d.id} id={d.id}/>
         );
 
     let messagesElements = props.messages
         .map(m =>
-            <Message message={m.message}/>
+            <Message message={m.message} key={m.id}/>
         );
 
     let messageElement = React.createRef();

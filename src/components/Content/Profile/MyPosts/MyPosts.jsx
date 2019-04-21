@@ -6,12 +6,12 @@ import Post from "./Post/Post";
 const MyPosts = (props) => {
     let myPosts = props.posts
         .map( p =>
-            <div>{p.post}</div>
+            <div key={p.id}>{p.post}</div>
         );
 
     let comments = props.comments
         .map( c =>
-            <Post message={c.comment} src_img={c.src_img}/>
+            <Post message={c.comment} key={c.id} src_img={c.src_img}/>
         );
 
     let newPostElement = React.createRef();
