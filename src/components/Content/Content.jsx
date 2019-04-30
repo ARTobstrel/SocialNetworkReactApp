@@ -6,6 +6,7 @@ import Settings from "./Settings/Settings";
 import React from "react";
 import About from "./About/About";
 import DialogsContainer from "./Dialogs/DialogsContainer";
+import UsersContainer from "../Users/UsersContainer";
 
 
 const Content = () => {
@@ -17,7 +18,8 @@ const Content = () => {
             <Route path={'/news'} render={() => <News/>}/>
             <Route path={'/music'} render={() => <Music/>}/>
             <Route path={'/settings'} render={() => <Settings/>}/>
-            <Route path={'/about'} render={() => <About/>}/>
+            <Route path={'/'} render={() => <About/>}/>
+            <Route path={'/users'} render={() => <UsersContainer/>}/>
 
         </div>
     )
