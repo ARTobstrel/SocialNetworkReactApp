@@ -1,11 +1,12 @@
 .header {
+    display: flex;
     grid-area: h;
-    background-color: green;
+    background-color: #eeeae1;
     border: 1px solid #0f5412;
     margin-top: 10px;
 }
 
 .header img {
-    width: 6%;
-    background-color: green;
+    width: 30%;
+    background-color: #eeeae1;
 }
